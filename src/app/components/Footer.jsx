@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-10 mt-16">
@@ -12,18 +14,18 @@ export default function Footer() {
             <div>
                 <h3 className="text-lg font-semibold mb-3">Bread</h3>
                 <ul className="space-y-2">
-                    <li><a href="#" className="hover:text-warm-gray">Cheese Bread</a></li>
-                    <li><a href="#" className="hover:text-warm-gray">Peanut Sandwich</a></li>
-                    <li><a href="#" className="hover:text-warm-gray">Milk Bread</a></li>
+                    <li><Link href="#" className="hover:text-warm-gray">Cheese Bread</Link></li>
+                    <li><Link href="#" className="hover:text-warm-gray">Peanut Sandwich</Link></li>
+                    <li><Link href="#" className="hover:text-warm-gray">Milk Bread</Link></li>
                 </ul>
             </div>
 
             <div>
                 <h3 className="text-lg font-semibold mb-3">Sweets</h3>
                 <ul className="space-y-2">
-                    <li><a href="#" className="hover:text-warm-gray">Cookies</a></li>
-                    <li><a href="#" className="hover:text-warm-gray">Cake & Pastries</a></li>
-                    <li><a href="#" className="hover:text-warm-gray">Seasonal Specials</a></li>
+                    <li><Link href="#" className="hover:text-warm-gray">Cookies</Link></li>
+                    <li><Link href="#" className="hover:text-warm-gray">Cake & Pastries</Link></li>
+                    <li><Link href="#" className="hover:text-warm-gray">Seasonal Specials</Link></li>
                 </ul>
             </div>
         </div>
