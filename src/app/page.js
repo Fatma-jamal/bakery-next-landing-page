@@ -1,103 +1,106 @@
-import Image from "next/image";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import ProductsGrid from "./components/ProductsGrid";
+import MenuSection from "./components/MenuSection";
+import { products, menu } from "./data/products";
+import Footer from "./components/Footer";
 
-export default function Home() {
+export default function HomePage() {
+  
+
+  const sweetProducts = [
+    {id:1 ,name: "Cookies", price: "$3.50", image: "cinnamon.jpg" },
+    {id:2 ,name: "Turkish Bagels", price: "$5.50", image: "cinnamon.jpg" },
+    {id:3 ,name: "Carrot Cake", price: "$8.50", image: "cinnamon.jpg" },
+    {id:4 ,name: "Chocolate Croissant", price: "$4.50", image: "cinnamon.jpg" },
+    {id:5 ,name: "Cinnamon Roll Pie", price: "$6.50", image: "cinnamon.jpg" },
+    {id:6 ,name: "Brownie", price: "$3.50", image: "cinnamon.jpg" },
+  ]
+
+  const menu = {
+    Cookies: [
+      "Biscotti",
+      "Chocolate Chip",
+      "Oatmeal Pecan",
+      "Oat Ginger Bar",
+      "Seasonal specials",
+    ],
+    Scones: [
+      "Classic butter scone",
+      "Fresh fruit buttermilk scones",
+      "Handmade scones",
+    ],
+    Other: [
+      "Seasonal galettes",
+      "Tartlets",
+      "Banana Bread",
+      "Bread Pudding",
+      "Cranberry Pecan Granola",
+    ],
+  };
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <Navbar/>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* <div className="flex flex-wrap w-full">
+        <div className="w-full md:w-1/2">
+          <img
+            src="/images/intro.jpg"
+            alt="intro"
+            className="w-full h-64 md:h-96 object-cover"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="w-full md:w-1/2 bg-black flex items-center justify-center h-auto md:h-96 text-center py-8 md:py-0">
+          <div className="flex flex-col items-center justify-center space-y-4 px-4">
+            <h1 className="text-white text-2xl font-bold">Delicious Breads</h1>
+            <p className="text-white max-w-md text-sm">
+              Nibh venenatis cras sed felis eget velit aliquet sagittis id.
+              Tellus pellentesque eu tincidunt tortor aliquam nulla.
+            </p>
+            
+            <button className="bg-black text-white border border-white rounded hover:bg-white hover:text-black transition px-0 py-0">
+              <span className="inline-block px-6 py-3 rounded">Learn More</span>
+            </button>
+          </div>
+        </div>
+      </div> */}
+
+      <HeroSection/>
+
+
+      {/* our bread  */}
+      <section className="flex flex-col items-center justify-center text-center px-4 py-12">
+        <h1 className="text-black text-3xl font-bold mb-4">Our Bread</h1>
+        <p className="text-black max-w-md text-sm mb-8">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+        </p>
+        <ProductsGrid products={products.bread} textColor="text-black"/>
+      </section>
+
+      {/* Sweets section */}
+      <section className="flex flex-col items-center justify-center text-center px-4 py-12 bg-black">
+        <h1 className="text-white text-3xl font-bold mb-4">Sweets</h1>
+        <p className="text-white max-w-md text-sm mb-8">
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+        </p>
+        <ProductsGrid products={products.sweet} textColor="text-white"/>
+      </section>
+
+      {/* Menu section */}
+      <section className="flex flex-col items-center justify-center text-center px-4 py-12 bg-white">
+        <h1 className="text-white text-3xl font-bold mb-4 mx-10 my-10">Sweets</h1>
+        <MenuSection menu = {menu}/>
+      </section>
+
+      <Footer/>
+
+      
+   
     </div>
-  );
+  )
 }
