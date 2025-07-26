@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <div className="text-xl font-bold text-black">
+        <div className="text-xl font-bold text-black" style={{margin:"5px"}}>
           <Link href="/">Bakery</Link>
         </div>
 
@@ -23,9 +23,9 @@ export default function Navbar() {
         <div className={`sm:flex ${
             open ? "block mt-4 space-y-4" : "hidden sm:block"
           } space-x-0 sm:space-x-6`}>
-          <Link href="/about" className="block text-black hover:text-warm-gray">About</Link>
-          <Link href="/products" className="block text-black hover:text-warm-gray">Products</Link>
-          <Link href="/contact" className="block text-black hover:text-warm-gray">Contact</Link>
+          <Link href="/about" className="block text-black hover:text-warm-gray" style={{margin:"5px"}}>About</Link>
+          <Link href="/products" className="block text-black hover:text-warm-gray" style={{margin:"5px"}}>Products</Link>
+          <Link href="/contact" className="block text-black hover:text-warm-gray" style={{margin:"5px"}}>Contact</Link>
         </div>
 
       </div>
