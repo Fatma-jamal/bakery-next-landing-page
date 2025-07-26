@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
+import IntroSection from "./components/IntroSection";
 import ProductsGrid from "./components/ProductsGrid";
 import MenuSection from "./components/MenuSection";
 import { products, menu } from "./data/products";
@@ -12,8 +12,8 @@ export default function HomePage() {
       {/* Header */}
       <Navbar/>
 
-      <HeroSection/>
-
+      {/* Intro section */}
+      <IntroSection/>
 
       {/* our bread  */}
       <section className="flex flex-col items-center justify-center text-center px-4 py-12">
@@ -42,8 +42,6 @@ export default function HomePage() {
       </section>
 
       <Footer/>
-
-      
    
     </div>
   )

@@ -1,4 +1,4 @@
-export default function HeroSection() {
+export default function IntroSection() {
   return (
     <section className="flex flex-wrap w-full">
       <div className="w-full md:w-1/2">
