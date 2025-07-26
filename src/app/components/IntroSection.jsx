@@ -10,8 +10,8 @@ export default function IntroSection() {
           <h1 className="text-2xl font-bold">Delicious Breads</h1>
           <p className="max-w-md text-sm" style={{margin:"10px"}}>Nibh venenatis cras sed felis eget velit...</p>
           <button className="inline-block px-6 py-3 rounded border border-white
-          hover:text-black hover:bg-white hover:border-none" 
-          style={{padding:"10px"}}>VIEW PRODUCTS</button>
+        hover:text-black hover:bg-white hover:border-none uppercase" 
+          style={{padding:"10px"}}>view products</button>
         </div>
       </div>
     </section>

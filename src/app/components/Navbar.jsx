@@ -1,4 +1,3 @@
-// components/Navbar.js
 'use client'
 import { useState } from "react";
 import Link from "next/link";
@@ -15,12 +14,8 @@ export default function Navbar() {
 
         <button
           className="sm:hidden absolute top-4 right-4 text-neutral-700 focus:outline-none cursor-pointer"
-          onClick={() => setOpen(!open)}
-        >
-          ☰
-        </button>
-
-
+          onClick={() => setOpen(!open)}> ☰ </button>
+          
         <div className={`sm:flex ${
             open ? "block mt-4 space-y-4" : "hidden sm:block"
           } space-x-0 sm:space-x-6`}>
