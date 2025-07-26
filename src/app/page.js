@@ -5,11 +5,15 @@ import MenuSection from "./components/MenuSection";
 import { products, menu } from "./data/products";
 import Footer from "./components/Footer";
 
+export const metadata = {
+  title: "bakery landing page"
+}
+
 export default function HomePage() {
   
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
+      {/* Navbar */}
       <Navbar/>
 
       {/* Intro section */}
