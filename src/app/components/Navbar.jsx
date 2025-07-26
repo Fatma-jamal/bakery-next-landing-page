@@ -14,11 +14,12 @@ export default function Navbar() {
         </div>
 
         <button
-          className="sm:hidden text-neutral-700 focus:outline-none"
+          className="sm:hidden absolute top-4 right-4 text-neutral-700 focus:outline-none cursor-pointer"
           onClick={() => setOpen(!open)}
         >
           ☰
         </button>
+
 
         <div className={`sm:flex ${
             open ? "block mt-4 space-y-4" : "hidden sm:block"
